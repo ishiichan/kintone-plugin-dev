@@ -10,9 +10,16 @@ module.exports = {
   ],
   parserOptions: {
     parser: "@babel/eslint-parser",
+    // sourceType: "module",
+  },
+  globals: {
+    kintone: true,
+    event: true,
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "vue/comment-directive": 0,
   },
+  ignorePatterns: ["**/*.html"],
 };
